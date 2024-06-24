@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int i;
+    float f;
+    char c;
+
+    // Take input from user
+    cout << "Enter an integer: ";
+    cin >> i;
+
+    cout << "Enter a float: ";
+    cin >> f;
+
+    cout << "Enter a character: ";
+    cin >> c;
+
+    // Convert and display
+    float iToF = i; // int to float
+    char iToC = static_cast<char>(i); // int to char (ASCII code point)
+
+    cout << "Integer " << i << " to float: " << iToF << endl;
+    cout << "Integer " << i << " to character: " << iToC << endl;
+
+    int fToI = f; // float to int (truncation may occur)
+    char fToC = static_cast<char>(f); // float to char (ASCII code point)
+
+    cout << "Float " << f << " to integer: " << fToI << endl;
+    cout << "Float " << f << " to character: " << fToC << endl;
+
+    float cToF = c; // char to float (ASCII code point)
+    int cToI = c; // char to int (ASCII code point)
+
+    cout << "Character " << c << " to float: " << cToF << endl;
+    cout << "Character " << c << " to integer: " << cToI << endl;
+
+    return 0;
+}
